@@ -1,6 +1,5 @@
 <?php
     $name = 'Chris';
-    $message = 'Ciao come va?';
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +16,16 @@
         <p>
             Mi chiamo: <?php echo $name; ?>
         </p>
-        <p>
-            Il mio messaggio segreto è: <?php echo $message; ?>
-        </p>
+        <p>Messaggio:</p>
+        <form action="about.php" method="POST">
+        <textarea name="messaggio" id="messaggio"></textarea>
+        <button type='submit'>Invia</button>
+
+        </form>
+
+        <a href="./about.php">
+            Avanti
+        </a>
        
     </div>
     
