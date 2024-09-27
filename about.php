@@ -1,7 +1,9 @@
 <?php
+    $nome = $_POST["nome"];
     $messaggio = $_POST["messaggio"];
     $lunghezzaOriginale = strlen($messaggio);
-    
+    $parolaCensurata = str_ireplace( $messaggio, 'messaggio', '***');
+    $lunghezza_censurata = strlen($parolaCensurata)
 ?>
 
 <!DOCTYPE html>
@@ -14,19 +16,22 @@
 <body>
 
 <h1>
-    Messaggio segreto:
+    Nome:
+    <?php echo $nome ?>
 </h1>
 
 <div>
     <h3>
-        Risposta: 
+        Messaggio: 
         <?php echo $messaggio ?> 
         <?php echo($lunghezzaOriginale) ?>
     </h3>
 </div>
 <div>
     <p>
-    Risposta censurata:
+        Messaggio censurato:
+        <?php echo($parolaCensurata) ?>
+        <?php echo($lunghezza_censurata) ?>
     </p>
 </div>
 

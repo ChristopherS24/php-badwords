@@ -1,7 +1,3 @@
-<?php
-    $name = 'Chris';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +9,16 @@
     <h1>Badwords</h1>
 
     <div>
-        <p>
-            Mi chiamo: <?php echo $name; ?>
-        </p>
-        <p>Messaggio:</p>
         <form action="about.php" method="POST">
-        <textarea name="messaggio" id="messaggio"></textarea>
-        <button type='submit'>Invia</button>
+
+        <div>
+            <p>Nome:<input type="text" name="nome" id="nome"></p>
+        </div>
+
+        <div>
+            <textarea name="messaggio" id="messaggio"></textarea>
+            <button type='submit'>Invia</button>
+        </div>
 
         </form>
 
