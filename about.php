@@ -1,5 +1,7 @@
 <?php
     $messaggio = $_POST["messaggio"];
+    $lunghezzaOriginale = strlen($messaggio);
+    
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +18,16 @@
 </h1>
 
 <div>
-    <h3>Risposta: <?php echo $messaggio ?> </h3>
-    
-
-    <p>Risposta censurata:</p>
+    <h3>
+        Risposta: 
+        <?php echo $messaggio ?> 
+        <?php echo($lunghezzaOriginale) ?>
+    </h3>
+</div>
+<div>
+    <p>
+    Risposta censurata:
+    </p>
 </div>
 
 <a href="./index.php">
